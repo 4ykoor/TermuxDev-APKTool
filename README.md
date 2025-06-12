@@ -71,7 +71,9 @@ bash menu.sh
 
 ## Licença
 
-Este projeto é aberto para uso e modificação pessoal. Divirta-se!
+Este projeto está licenciado sob os termos da Licença MIT.  
+Você pode usar, modificar e compartilhar à vontade, mas mantenha os créditos.  
+[Ver arquivo LICENSE](LICENSE)
 
 ---
 
