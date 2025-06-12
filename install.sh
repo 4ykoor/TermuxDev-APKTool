@@ -1,31 +1,29 @@
 #!/bin/bash
 
-REPO="https://github.com/4ykoor/devpreguicoso"
-DIR="devpreguicoso"
+# Cores para deixar bonitão
+verde="\033[1;32m"
+vermelho="\033[1;31m"
+neutro="\033[0m"
 
-echo "🔄 Clonando o repositório de @4ykoor..."
+echo -e "${verde}🔧 Iniciando configuração do TermuxDev APK Tool...${neutro}"
 
-if [ -d "$DIR" ]; then
-    echo "🧹 Pasta '$DIR' já existe. Deseja sobrescrever? (s/n)"
-    read -p "› " op
-    if [ "$op" = "s" ]; then
-        rm -rf "$DIR"
-    else
-        echo "❌ Instalação cancelada."
-        exit 1
-    fi
+# Confere se está no diretório do projeto (menu.sh deve existir)
+if [ ! -f "menu.sh" ]; then
+  echo -e "${vermelho}Erro: Não encontrei o arquivo menu.sh. Rode o script no diretório do projeto.${neutro}"
+  exit 1
 fi
 
-git clone "$REPO"
+# Dá permissão de execução aos scripts
+chmod +x menu.sh
+chmod +x scripts/*.sh
 
-if [ $? -eq 0 ]; then
-    echo "✅ Repositório clonado com sucesso."
-    cd "$DIR"
-    chmod +x menu.sh
-    echo "▶️ Pronto! Agora execute:"
-    echo ""
-    echo "  cd $DIR && bash menu.sh"
-    echo ""
-else
-    echo "❌ Erro ao clonar o repositório."
+# Detecta se é Termux para pedir permissão de armazenamento
+if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
+  echo -e "${verde}📱 Detectado Termux, solicitando permissão para armazenamento...${neutro}"
+  termux-setup-storage
+  sleep 2
 fi
+
+echo -e "${verde}✅ Instalação/configuração concluída com sucesso!${neutro}"
+echo -e "Para iniciar a ferramenta, rode: ${verde}bash menu.sh${neutro}"
+
