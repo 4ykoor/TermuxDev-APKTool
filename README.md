@@ -37,7 +37,7 @@ pkg install git -y
 2. Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/TermuxDev-APKTool
+git clone https://github.com/4ykoor/TermuxDev-APKTool
 ```
 
 3. Entre na pasta do projeto:
