@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# devpreguicoso - por @4ykoor
-# Desenvolvido com muita preguiça 💤
-
 clear
 echo "=============================="
 echo "   DEV PREGUIÇOSO - MENU DEV"
