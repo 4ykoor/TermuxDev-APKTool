@@ -1,5 +1,4 @@
 
-````markdown
 # TermuxDev APK Tool
 
 **Criado por @4ykoor**  
@@ -83,5 +82,3 @@ Para dúvidas e sugestões, me ache como [@4ykoor](https://github.com/4ykoor)
 ---
 
 Feito com preguiça e café ☕
-
-```
