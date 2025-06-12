@@ -23,7 +23,7 @@ while true; do
   read -p "› " opcao
 
   case $opcao in
-    1) bash scripts/infos.sh ;;
+    1) bash scripts/info.sh ;;
     2) bash scripts/comandos.sh ;;
     3) bash scripts/linguagens.sh ;;
     4) bash scripts/criar_estrutura.sh ;;
