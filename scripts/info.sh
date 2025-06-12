@@ -23,7 +23,7 @@ while true; do
   case $opcao in
     1)
       echo
-      echo "Repositório: https://github.com/SEU-USUARIO/TermuxDev-APKTool"
+      echo "Repositório: https://github.com/4ykoor/TermuxDev-APKTool"
       ;;
     0)
       break
